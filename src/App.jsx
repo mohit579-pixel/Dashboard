@@ -1,10 +1,15 @@
+import { registerLicense } from '@syncfusion/ej2-base';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import React from 'react';
 import { FiSettings } from 'react-icons/fi';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
+registerLicense('ORg4AjUWIQA/Gnt2U1hhQlJBfVZdX3xLflFyVWFTfFh6cFxWESFaRnZdRl1rSX1TdEFhXXxceHZV');
+
 function App() {
+
+  const activeMenu=true;
   return (
     <div>
       <BrowserRouter>
@@ -20,6 +25,15 @@ function App() {
               </button>
             </TooltipComponent>
           </div>
+          {activeMenu?(
+            <div>
+              Sidebars
+            </div>
+          ):(
+            <div>
+              Sidebar w-0
+            </div>
+          )}
         </div>
       </BrowserRouter>
     </div>
